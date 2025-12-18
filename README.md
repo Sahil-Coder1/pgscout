@@ -1,16 +1,55 @@
-# React + Vite
+# PG-Scout 🏠
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A **student-centric platform** to help students find **safe, affordable, and nearby PGs or hostels** with transparency and trust.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📌 Problem
 
-## React Compiler
+Students moving to new cities for education face major difficulties in finding reliable PGs near their colleges. Existing systems are dominated by brokers, unclear pricing, and poor availability visibility.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## ❗ Key Issues
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- High one-time payments (₹1 lakh or more)
+- Forced long-term contracts (6–12 months)
+- No standard information about amenities (Wi-Fi, food, RO, power backup)
+- Difficulty finding PGs in preferred or nearby areas
+- Lack of reliable, student-driven ratings and reviews
+
+---
+
+## ⚠️ Impact
+
+- Wrong housing choices
+- Financial loss
+- Poor living conditions and discomfort
+- Reduced trust in existing platforms
+
+---
+
+## 🚀 Solution: PG-Scout
+
+PG-Scout is a **verified, student-first platform** that uses **AI and location-based analysis** to recommend the best PGs based on:
+
+- Location & availability
+- Pricing & stay flexibility
+- Amenities
+- Student ratings
+
+---
+
+## 🤖 Role of AI
+
+- Smart PG recommendations
+- Location-based availability detection
+- Analysis of pricing, amenities, and student reviews
+
+---
+
+## 🎯 Vision
+
+To build a **transparent and trustworthy student housing ecosystem** that helps students make informed decisions without broker interference.
+
+---
