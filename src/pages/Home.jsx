@@ -48,6 +48,46 @@ export default function App() {
     router(url);
   };
 
+  const getUserLocation = () => {
+    if (!navigator.geolocation) {
+      alert("Geolocation is not supported by your browser");
+      return;
+    }
+
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+
+        console.log("Latitude:", latitude);
+        console.log("Longitude:", longitude);
+
+        // 👉 You can call API here
+        // fetchNearbyPlaces(latitude, longitude);
+      },
+      (error) => {
+        switch (error.code) {
+          case error.PERMISSION_DENIED:
+            alert("Location permission denied");
+            break;
+          case error.POSITION_UNAVAILABLE:
+            alert("Location information unavailable");
+            break;
+          case error.TIMEOUT:
+            alert("Location request timed out");
+            break;
+          default:
+            alert("An unknown error occurred");
+        }
+      },
+      {
+        enableHighAccuracy: true,
+        timeout: 10000,
+        maximumAge: 0,
+      }
+    );
+  };
+
   return (
     <div className="min-h-screen bg-[#F8FAFC] text-[#1E293B] font-sans selection:bg-indigo-100 selection:text-indigo-700">
       <style>{`
@@ -86,7 +126,10 @@ export default function App() {
             </div>
 
             <div className="flex items-center gap-2 px-2 py-1 w-full md:w-auto">
-              <button className="flex-1 md:flex-none px-6 py-3 rounded-xl bg-slate-50 text-slate-700 font-bold text-sm hover:bg-slate-100 transition whitespace-nowrap">
+              <button
+                onClick={getUserLocation}
+                className="flex-1 md:flex-none px-6 py-3 rounded-xl bg-slate-50 text-slate-700 font-bold text-sm hover:bg-slate-100 transition whitespace-nowrap"
+              >
                 Nearby
               </button>
               <button

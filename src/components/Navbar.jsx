@@ -5,8 +5,9 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 bg-white/70 backdrop-blur-xl border-b border-slate-200/60">
       <div className="max-w-7xl mx-auto px-6 h-18 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <div className="bg-indigo-600 p-1.5 rounded-lg text-white">
-            <Home size={22} />
+          <div className="bg-black p-1.5 rounded-lg text-white">
+            {/* <Home size={22} /> */}
+            <img src="src/assets/icon.png" alt="logo" />
           </div>
           <h1 className="text-xl font-extrabold tracking-tight text-slate-900">
             PG<span className="text-indigo-600">Scout</span>
