@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   Search,
   MapPin,
@@ -13,9 +13,11 @@ import {
   LayoutGrid,
   Map as MapIcon,
 } from "lucide-react";
+import { useSearchParams } from "react-router-dom";
 
 const SearchPage = () => {
-  const { searchTerm } = useParams();
+  const [searchParams] = useSearchParams();
+  const location = searchParams.get("location");
   const navigate = useNavigate();
   const [view, setView] = useState("list");
   const [activeFilter, setActiveFilter] = useState("All");
@@ -93,7 +95,7 @@ const SearchPage = () => {
                 Location
               </span>
               <span className="text-sm font-bold text-slate-800">
-                {searchTerm}
+                {location}
               </span>
             </div>
           </div>
@@ -121,7 +123,7 @@ const SearchPage = () => {
               {searchResults.length * 32} PGs found
             </h2>
             <p className="text-xs font-medium text-slate-500">
-              Showing results for "{searchTerm}"
+              Showing results for "{location}"
             </p>
           </div>
           <div className="flex bg-white p-1 rounded-xl border border-slate-200 shadow-sm">

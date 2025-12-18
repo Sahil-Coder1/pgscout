@@ -44,7 +44,7 @@ export default function App() {
   const [search, setSearch] = useState("");
 
   const handleSearch = () => {
-    const url = `/search=${search}`;
+    const url = `/search?location=${encodeURIComponent(search)}`;
     router(url);
   };
 

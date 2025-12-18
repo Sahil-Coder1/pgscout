@@ -8,7 +8,7 @@ export default function App() {
       <div>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/search=:searchTerm" element={<SearchPage />} />
+          <Route path="/search" element={<SearchPage />} />
         </Routes>
       </div>
     </Router>
