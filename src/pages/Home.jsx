@@ -61,9 +61,6 @@ export default function App() {
 
         console.log("Latitude:", latitude);
         console.log("Longitude:", longitude);
-
-        // 👉 You can call API here
-        // fetchNearbyPlaces(latitude, longitude);
       },
       (error) => {
         switch (error.code) {
